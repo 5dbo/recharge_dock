@@ -2,7 +2,7 @@
 
 $Descr A4 11693 8268
 encoding utf-8
-</Descr>
+$EndDescr
 
 # Dock schematic - native KiCad S-expression
 # Full schematic: pogo pads, dock detect comparator, resistor divider, MOSFET power switch, JST harness connector, decoupling
