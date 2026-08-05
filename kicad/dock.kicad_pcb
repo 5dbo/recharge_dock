@@ -1,2 +1,15 @@
-(kicad_pcb (version 20241229) (generator "pcbnew") (generator_version "9.0")
-)
+Reference,Qty,Part,Description,Footprint,Manufacturer_PN
+J1,1,JST_SH_6,6-pin JST SH right-angle (harness to robot),Conn:JST_SH_6,B6B-PH-SM4-TB(LF)(SN)
+U1,1,TLV7031,Comparator TLV7031 (SOT-23-5),SOT-23-5,TLV7031IDRLR
+Q1,1,SI2302,N-channel MOSFET SOT-23, SOT-23,SI2302
+U2,1,REG_5V,LDO regulator 5V->3.3V (SOT-23-5),SOT-23-5,LD1117-3.3 (or similar)
+POGO1,1,POGO_PAD,Gold pogo pad footprint (front left),POGO_PAD,Keystone_5000
+POGO2,1,POGO_PAD,Gold pogo pad footprint (front center),POGO_PAD,Keystone_5000
+POGO3,1,POGO_PAD,Gold pogo pad footprint (front right),POGO_PAD,Keystone_5000
+R1,1,100k,Resistor divider for dock detect 0402,RES_0402,ERJ-2GEYJ104V
+R2,1,47k,Resistor divider for dock detect 0402,RES_0402,ERJ-2GEYJ473V
+R3,1,10k,Gate/pull resistor for MOSFET 0402,RES_0402,ERJ-2GEYJ103V
+C1,1,0.1uF,Decoupling 0603,Cap_0603,GRM188R71C104KA01D
+D1,1,PESD5V,TVS for pogo protection 0603,TVD_0603,PESD5V
+Misc,5,Resistors,Assorted 0402,RES_0402,Mfr_standard
+MiscC,3,Capacitors,Assorted 0603/0805,Cap_0603,Mfr_standard

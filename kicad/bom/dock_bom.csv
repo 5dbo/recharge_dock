@@ -1,0 +1,64 @@
+(kicad_pcb (version 6) (host pcbnew 6.0)
+  (general (thickness 1.6))
+  (page A4)
+  (layers (0 F.Cu) (31 B.Cu) (32 B.Adhes) (33 F.Adhes) (34 Edge.Cuts))
+  (setup (last_trace_width 0.25))
+  (net_class Default (clearance 0.2) (trace_width 0.25) (via_dia 0.6) (via_drill 0.4))
+
+  (net 0 "POGO_VBAT")
+  (net 1 "GND")
+  (net 2 "SDA")
+  (net 3 "SCL")
+  (net 4 "DOCK_DET")
+  (net 5 "IRQ")
+  (net 6 "POGO_SENSE")
+  (net 7 "5V_OUT")
+
+  # Board outline 60 mm x 30 mm
+  (gr_line (start 0 0) (end 60 0) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 60 0) (end 60 30) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 60 30) (end 0 30) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 0 30) (end 0 0) (layer Edge.Cuts) (width 0.15))
+
+  # Pogo pad mechanical placeholders (3 pads at front edge)
+  (pad POGO1 thru_hole circle (at 10 30) (size 3.0 3.0) (drill 1.2) (layers *.Cu *.Mask) (net 0))
+  (pad POGO2 thru_hole circle (at 30 30) (size 3.0 3.0) (drill 1.2) (layers *.Cu *.Mask) (net 6))
+  (pad POGO3 thru_hole circle (at 50 30) (size 3.0 3.0) (drill 1.2) (layers *.Cu *.Mask) (net 1))
+
+  # JST connector placement at bottom edge
+  (module Connector:JST_SH_6 (layer F.Cu) (tedit 0)
+    (at 30 5)
+    (descr "JST SH 6-pin")
+    (fp_text reference J1 (at 0 3.5) (layer F.SilkS))
+    (fp_text value JST_SH_6 (at 0 -3.5) (layer F.Fab))
+  )
+
+  # Placeholder footprints for comparator, MOSFET, LDO, passives
+  (module SOT-23-5 (layer F.Cu) (tedit 0)
+    (at 15 12)
+    (descr "TLV7031 (SOT-23-5) placement")
+    (fp_text reference U1 (at 0 2) (layer F.SilkS))
+    (fp_text value TLV7031 (at 0 -2) (layer F.Fab))
+  )
+
+  (module SOT-23 (layer F.Cu) (tedit 0)
+    (at 45 12)
+    (descr "Q1 MOSFET SOT-23")
+    (fp_text reference Q1 (at 0 2) (layer F.SilkS))
+    (fp_text value MOSFET (at 0 -2) (layer F.Fab))
+  )
+
+  (module SOT-23-5 (layer F.Cu) (tedit 0)
+    (at 30 18)
+    (descr "U2 Regulator SOT-23-5")
+    (fp_text reference U2 (at 0 2) (layer F.SilkS))
+    (fp_text value REG (at 0 -2) (layer F.Fab))
+  )
+
+  # Passive placeholders (0402 / 0603)
+  (module Resistor_SMD:R_0402 (layer F.Cu) (tedit 0) (at 10 8) (descr "R1") (fp_text reference R1 (at 0 1) (layer F.SilkS)))
+  (module Resistor_SMD:R_0402 (layer F.Cu) (tedit 0) (at 20 8) (descr "R2") (fp_text reference R2 (at 0 1) (layer F.SilkS)))
+  (module Resistor_SMD:R_0402 (layer F.Cu) (tedit 0) (at 25 8) (descr "R3") (fp_text reference R3 (at 0 1) (layer F.SilkS)))
+  (module Capacitor_SMD:C_0603 (layer F.Cu) (tedit 0) (at 30 8) (descr "C1") (fp_text reference C1 (at 0 1) (layer F.SilkS)))
+
+)
